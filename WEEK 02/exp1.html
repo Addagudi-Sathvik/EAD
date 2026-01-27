@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit-registration" method="POST">
+    <label>Student Name:</label><br>
+    <input type="text" name="studentName" required><br><br>
+
+    <label>Roll Number:</label><br>
+    <input type="number" name="rollNo" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Phone Number:</label><br>
+    <input type="tel" name="phone"><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other<br><br>
+
+    <label>Branch:</label><br>
+    <select name="branch">
+        <option value="cs">Computer Science</option>
+        <option value="it">Information Technology</option>
+        <option value="ece">Electronics</option>
+        <option value="mech">Mechanical</option>
+    </select><br><br>
+
+    <button type="submit">Submit Registration</button>
+</form>
+
+
+
+    
+    
+
+</body>
+</html>

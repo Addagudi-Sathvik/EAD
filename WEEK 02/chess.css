@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 140px ;
+    font-size: 32px;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(8,60px);
+    grid-template-columns: repeat(8,60px);
+    border: 2px solid black;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    font-size: 32px;
+}
+.black{
+    
+    background-color: #769656;
+    
+}
+.white{
+    background-color: #eeeed2;
+    
+}
