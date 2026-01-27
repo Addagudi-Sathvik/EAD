@@ -1,29 +1,27 @@
-body{
+body {
     display: flex;
     justify-content: center;
-    margin-top: 140px ;
+    margin-top: 140px;
     font-size: 32px;
 }
-.board{
-    display: grid;
-    grid-template-columns: repeat(8,60px);
-    grid-template-columns: repeat(8,60px);
+
+.board {
+    border-collapse: collapse;
     border: 2px solid black;
 }
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.box {
     height: 60px;
     width: 60px;
+    text-align: center;
+    vertical-align: middle;
     font-size: 32px;
 }
-.black{
-    
+
+.black {
     background-color: #769656;
-    
 }
-.white{
+
+.white {
     background-color: #eeeed2;
-    
 }
