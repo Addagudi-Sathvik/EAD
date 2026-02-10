@@ -1,0 +1,75 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkgVNaGdh6BR1Z7nnzeJTMKCptxkZKycsnEsx4tZrNG8VMmxL29pdReas&s); 
+    background-size: 100% 100%;
+    color: white;
+}
+.heading{
+    display: flex ;
+    background-color: #AF3E4D ; 
+    color : white;
+    
+    border-bottom: 1mm solid whitesmoke;
+}
+h1{
+    margin: 1vmin;
+    padding: 2vmin;
+    font-size: 6vmin;
+    padding-right: 50vmin;
+    
+}
+.nav{
+    display: inline-block;
+    padding: 4vmin;
+    font-size: 3vmin;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 1.5vmin 1.5vmin;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 2.2vmin;
+    width: 50vmin;
+    
+}
+
+.search-box input:focus {
+    width: 28vmin;
+}
+
+a:hover{
+    color: black;
+    box-shadow: rgba(0,0,0,0.7);
+}
+.images{
+    width: 70vmin;
+    height: 60vmin;
+    display: flex;
+    margin: 10px;
+}
+.product{
+    margin: 5px;
+    text-align: center;
+    box-shadow: rgba(0,0,0,0.5);
+    width: 18vmin;
+    display: flexbox;
+}
+h3{
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    padding-left: 15vmin;
+}
