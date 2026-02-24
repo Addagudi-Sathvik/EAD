@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzer</title>
+</head>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        body{
+            background-color: rgb(216, 19, 19);
+            color: cornsilk;
+        }
+        .loginpage{
+            padding: 15%;
+            padding-left: 35%;
+        }
+        .input{
+            border: 3px solid cornsilk;
+            border-radius: 10%;
+            display: block;
+            width: 250px;
+            height: 200px;
+            padding: 5%;
+            box-shadow: 5px 10px #fff;
+        }
+        .number{
+            display: block;
+            margin-left: 35px;
+            margin-bottom: 5px;
+            border-radius: 5%;
+        }
+        .btn{
+            margin-top: 15%;
+            margin-left: 35%;
+            width: 75px;
+            height: 30px;
+            border-radius: 15%;
+            border: 1px solid cornsilk;
+        }
+    </style>
+<body>
+    <div class="loginpage">
+        <form action="#" class="input">
+            <label class="number" for="number">Enter a Number</label>
+            <input type="number" id="number" name="number" class="number">
+            <button class="btn">submit</button>
+            <p class="analyzer"></p>
+        </form>
+    </div>
+<script>
+document.querySelector(".input").addEventListener("submit", function(event) {
+    event.preventDefault();  
+
+    let num = parseInt(document.getElementById("number").value);
+    let result = document.querySelector(".analyzer");
+
+    if (isNaN(num)) {
+        result.innerHTML = "Please enter a valid number";
+        return;
+    }
+
+    let palindrome = isPalindrome(num) ? "Palindrome" : "Not Palindrome";
+    let armstrong = isArmstrong(num) ? "Armstrong" : "Not Armstrong";
+    let prime = isPrime(num) ? "Prime" : "Not Prime";
+    let fact = factorial(num);
+
+    result.innerHTML =
+        "Palindrome: " + palindrome + "<br>" +
+        "Armstrong: " + armstrong + "<br>" +
+        "Prime: " + prime + "<br>" +
+        "Factorial: " + fact;
+});
+
+
+
+function isPalindrome(num) {
+    let str = num.toString();
+    let reversed = str.split("").reverse().join("");
+    return str === reversed;
+}
+
+function isArmstrong(num) {
+    let str = num.toString();
+    let power = str.length;
+    let sum = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        sum += Math.pow(parseInt(str[i]), power);
+    }
+
+    return sum === num;
+}
+
+function isPrime(num) {
+    if (num <= 1) return false;
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+
+    return true;
+}
+
+function factorial(num) {
+    if (num < 0) return "Not defined for negative numbers";
+
+    let fact = 1;
+    for (let i = 1; i <= num; i++) {
+        fact *= i;
+    }
+
+    return fact;
+}
+</script>
+</body>
+</html>

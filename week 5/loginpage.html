@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        body{
+            background-color: coral;
+            color: cornsilk;
+        }
+        .loginpage{
+            padding: 15%;
+            padding-left: 35%;
+        }
+        .input{
+            border: 3px solid cornsilk;
+            border-radius: 20%;
+            display: block;
+            width: 250px;
+            height: 150px;
+            padding: 5%;
+            box-shadow: 5px 10px #888888;
+        }
+        .Username{
+            display: block;
+            margin-left: 35px;
+            margin-bottom: 5px;
+            border-radius: 5%;
+        }
+        .Password{
+            display: block;
+            margin-left: 35px; 
+            margin-bottom: 5px;
+            border-radius: 5%;           
+        }
+        .btn{
+            margin-top: 15%;
+            margin-left: 35%;
+            width: 75px;
+            height: 30px;
+            border-radius: 15%;
+            border: 1px solid cornsilk;
+        }
+    </style>
+<body>
+    <div class="loginpage">
+        <form action="#" class="input">
+            <label class="Username" for="Username">Username</label>
+            <input type="email" id="Username" name="Username" class="Username">
+            <label class="Password" for="Password">Password</label>
+            <input type="password" id="Password" name="Password" class="Password">
+            <button class="btn">submit</button>
+        </form>
+    </div>
+    <script>
+        const button = document.querySelector(".btn");
+        let maxAttempt = 3;
+        let attempts = 0;
+        button.addEventListener("click", () => {
+            attempts++;
+            if(attempts >= maxAttempt){
+                button.disabled = true;
+                alert("Maximum Attempts are reached");
+            }
+        })
+
+    </script>
+</body>
+</html>
